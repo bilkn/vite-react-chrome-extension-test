@@ -8,6 +8,7 @@ const manifest: chrome.runtime.ManifestV3 = {
   name: "Timezone Clox",
   version: packageJson.version,
   description: packageJson.description,
+  permissions: ["storage"],
   background: {
     service_worker: "src/pages/background/index.js",
     type: "module",
