@@ -1,21 +1,20 @@
-import React from "react";
-import { AutoCompleteSearchbox, MainLayout } from "../../components";
 import {
-  Autocomplete,
-  Box,
-  Button,
-  IconButton,
-  Stack,
-  Typography,
-} from "@mui/material";
+  AutoCompleteSearchbox,
+  CustomButton,
+  MainLayout,
+} from "../../components";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { LeftArrowIcon } from "../../components/Icons";
 import { useSection } from "@root/src/shared/hooks/useSection";
 import useAddTimeZoneLogic from "./useAddTimeZoneLogic";
+import { useTimezone } from "@root/src/shared/hooks/useTimeZone";
+import timezoneJSON from "@root/src/shared/constants/timeZones.json";
 
 function AddTimeZone() {
   const { updateSection } = useSection();
-  const { handlers, timezoneList } = useAddTimeZoneLogic();
+  const { handlers, timezone } = useAddTimeZoneLogic();
+  const { handlers: timeZoneHandlers } = useTimezone();
 
   return (
     <motion.div
@@ -35,19 +34,23 @@ function AddTimeZone() {
         <Typography variant="h1" sx={{ mb: 5, mt: 2 }}>
           Add new timezone
         </Typography>
-        <AutoCompleteSearchbox
-          label="Search timezones"
-          options={timezoneList}
-          getOptionLabel={(timezone) => timezone.value}
-        />
+        <Box sx={{ minHeight: "300px" }}>
+          <AutoCompleteSearchbox
+            label="Search timezones"
+            options={timezoneJSON}
+            getOptionLabel={(timezone) => timezone.value}
+            onChange={handlers.handleTimeZoneChange}
+          />
+        </Box>
         <Stack sx={{ mt: 5 }}>
-          <Button
+          <CustomButton
             variant="contained"
             color="primary"
-            onClick={handlers.handleAddNewTimezone}
+            onClick={() => timeZoneHandlers.handleAddNewTimezone(timezone)}
+            disabled={!timezone}
           >
             Add new timezone
-          </Button>
+          </CustomButton>
         </Stack>
       </MainLayout>
     </motion.div>

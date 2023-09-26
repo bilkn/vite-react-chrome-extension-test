@@ -1,14 +1,16 @@
-import { useSection } from "@root/src/shared/hooks/useSection";
-import timezoneJSON from "@root/src/shared/constants/timeZones.json";
+import React from "react";
+import { ITimezone } from "@root/src/shared/types/common.types";
 
 function useAddTimeZoneLogic() {
-  const { updateSection } = useSection();
+  const [timezone, setTimezone] = React.useState<ITimezone | null>(null);
 
-  const handleAddNewTimezone = () => {
-    updateSection("home");
+  const handleTimeZoneChange = (_e: any, timezone: any) => {
+    const { value, text, utc: timezoneUTC } = timezone;
+    const utc = text.match(/\(UTC(-|\+)?\d?\d?:?\d?\d?\)/)[0];
+    setTimezone({ name: value, region: timezoneUTC[0], utc, date: null });
   };
-  const handlers = { handleAddNewTimezone };
-  return { handlers, timezoneList: timezoneJSON };
+  const handlers = { handleTimeZoneChange };
+  return { handlers, timezone };
 }
 
 export default useAddTimeZoneLogic;
