@@ -23,7 +23,7 @@ function TimezoneCard(props: ITimezoneCardProps) {
         position: "relative",
       }}
     >
-      <Typography variant="body1">{data.date.toFormat("hh:mm:ss")}</Typography>
+      <Typography variant="body1">{data.date.toFormat("HH:mm:ss")}</Typography>
       <Typography variant="body2">{data.utc}</Typography>
       <Typography
         variant="body2"
