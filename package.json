@@ -1,6 +1,6 @@
 {
   "name": "Timezone_Clox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A time application to add/remove clocks by different timezones.",
   "license": "MIT",
   "repository": {
