@@ -1,17 +1,19 @@
 import React from "react";
-import "@pages/popup/Popup.css";
 import withSuspense from "@src/shared/hoc/withSuspense";
-import { AddTimeZone, Home } from "./sections";
-import { Box, ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import theme from "@root/src/shared/style/theme";
+import { SectionProvider } from "@root/src/shared/hooks/useSection";
+import Sections from "./Sections";
+import { AnimatePresence } from "framer-motion";
 
 const Popup = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Box>
-        <Home />
-       {/*  <AddTimeZone /> */}
-      </Box>
+      <SectionProvider>
+        <AnimatePresence>
+          <Sections />
+        </AnimatePresence>
+      </SectionProvider>
     </ThemeProvider>
   );
 };
