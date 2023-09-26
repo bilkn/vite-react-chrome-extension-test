@@ -1,98 +1,64 @@
-<div align="center">
-<img src="public/icon-128.png" alt="logo"/>
-<h1> Chrome Extension Boilerplate with<br/>React + Vite + TypeScript</h1>
+# Timezone Clox - Chrome Extension for timezone management.
 
-![](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![](https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![](https://badges.aleen42.com/src/vitejs.svg)
-![GitHub action badge](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite/actions/workflows/build-zip.yml/badge.svg)
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/Jonghakseo/chrome-extension-boilerplate-react-viteFactions&count_bg=%23#222222&title_bg=%23#454545&title=😀&edge_flat=true" alt="hits"/>
+A time extension to add/remove clocks by different time zones.
 
+[Timezone Clox](https://chromewebstore.google.com/detail/timezone-clox/gbpnejfdlkconmokfpnkhljfnliocfih)
 
-> This project is listed in the [Awesome Vite](https://github.com/vitejs/awesome-vite)
+## Getting Started
 
-</div>
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Table of Contents
+### Prerequisites
 
-- [Intro](#intro)
-- [Features](#features)
-- [Installation](#installation)
-  - [Procedures](#procedures)
-- [Screenshots](#screenshots)
-  - [NewTab](#newtab)
-  - [Popup](#popup)  
-- [Examples](#examples)
-- [Documents](#documents)
+What things do you need to install the software and how to install them?
 
-## Intro <a name="intro"></a>
-This boilerplate is made for creating chrome extensions using React and Typescript.
-> The focus was on improving the build speed and development experience with Vite.
+- npm
 
-## Features <a name="features"></a>
-- [React 18](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- [Vite](https://vitejs.dev/)
-- [SASS](https://sass-lang.com/)
-- [Twind](https://twind.dev/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Chrome Extension Manifest Version 3](https://developer.chrome.com/docs/extensions/mv3/intro/)
-- HRR(Hot Rebuild & Refresh/Reload)
+``` 
+npm install npm@latest -g
+```
 
-## Installation <a name="installation"></a>
+### Installing
 
-### Procedures <a name="procedures"></a>
-1. Clone this repository.
-2. Change `name` and `description` in package.json => **Auto synchronize with manifest** 
-3. Run `yarn install` or `npm i` (check your node version >= 16.6, recommended >= 18)
-4. Run `yarn dev` or `npm run dev`
-5. Load Extension on Chrome
-   1. Open - Chrome browser
-   2. Access - chrome://extensions
-   3. Check - Developer mode
-   4. Find - Load unpacked extension
-   5. Select - `dist` folder in this project (after dev or build)
-6. If you want to build in production, Just run `yarn build` or `npm run build`.
+1. Clone the repo
 
-## Screenshots <a name="screenshots"></a>
+``` 
+git clone https://github.com/bilkn/Timezone-Clox.git
+```
 
-### New Tab <a name="newtab"></a>
+2. Run npm install inside the project root
 
-<img width="971" src="https://user-images.githubusercontent.com/53500778/162631646-cd40976b-b737-43d0-8e6a-6ac090a2e2d4.png">
+``` 
+npm install
+```
 
-### Popup <a name="popup"></a>
+3. Start the dev build
 
-<img width="314" alt="popup" src="https://user-images.githubusercontent.com/53500778/203561728-23517d46-12e3-4139-8a4f-e0b2f22a6ab3.png">
+``` 
+npm run dev
+```
 
-## Examples <a name="examples"></a>
-- https://github.com/Jonghakseo/drag-gpt-extension
-- https://github.com/Jonghakseo/pr-commit-noti
-- https://github.com/ariburaco/chatgpt-file-uploader-extended
+4. Load the "dist" folder according to the below instructions:
 
-## Documents <a name="documents"></a>
-- [Vite Plugin](https://vitejs.dev/guide/api-plugin.html)
-- [ChromeExtension](https://developer.chrome.com/docs/extensions/mv3/)
-- [Rollup](https://rollupjs.org/guide/en/)
-- [Rollup-plugin-chrome-extension](https://www.extend-chrome.dev/rollup-plugin)
+[Loading an unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
 
+5. Explore
 
-## Star History
+``` 
+Have fun :)
+```
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Jonghakseo/chrome-extension-boilerplate-react-vite&type=Date)](https://star-history.com/#Jonghakseo/chrome-extension-boilerplate-react-vite&Date)
+## Built With
+* [React](https://reactjs.org/) - JS Library for building user interfaces 
+* [TypeScript](https://www.typescriptlang.org/) - Typed programming language that builds on JavaScript
+* [Material UI](https://mui.com/) - UI library
+* [Framer Motion](https://www.framer.com/motion/) - Animation library
 
+## Contributors
 
+* **Bilkan Konus** - *Initial work*
 
----
-## Thanks To
+## License 
 
-| [Jetbrains](https://jb.gg/OpenSourceSupport)                                                                           | [Jackson Hong](https://www.linkedin.com/in/j-acks0n/)                                            |
-|--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <img width="100" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> | <img width="100" src='https://avatars.githubusercontent.com/u/23139754?v=4' alt='Jackson Hong'/> |
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-
----
-
-[Jonghakseo](https://nookpi.tistory.com/)
