@@ -1,8 +1,4 @@
-import {
-  AutoCompleteSearchbox,
-  CustomButton,
-  MainLayout,
-} from "../../components";
+import { CustomButton, MainLayout } from "../../components";
 import { Box, IconButton, Stack, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { LeftArrowIcon } from "../../components/Icons";
@@ -10,6 +6,7 @@ import { useSection } from "@root/src/shared/hooks/useSection";
 import useAddTimeZoneLogic from "./useAddTimeZoneLogic";
 import { useTimezone } from "@root/src/shared/hooks/useTimeZone";
 import timezoneJSON from "@root/src/shared/constants/timeZones.json";
+import AutoCompleteSearchbox from "../../components/AutoCompleteSearchbox";
 
 function AddTimeZone() {
   const { updateSection } = useSection();

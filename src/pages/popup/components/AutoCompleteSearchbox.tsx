@@ -1,10 +1,4 @@
-import {
-  Autocomplete,
-  AutocompleteProps,
-  FormControl,
-  Stack,
-  useTheme,
-} from "@mui/material";
+import { Autocomplete, AutocompleteProps, FormControl } from "@mui/material";
 import React from "react";
 import { StyledInput, StyledLabel } from "./CustomInput";
 
@@ -20,15 +14,10 @@ interface AutoCompleteSearchBoxProps<T>
 }
 
 function AutoCompleteSearchbox<T>(props: AutoCompleteSearchBoxProps<T>) {
-  const [isOpen, setIsOpen] = React.useState<boolean>(false);
   const { label, options } = props;
-  const theme = useTheme();
 
-  // POSSIBLE_TODO: Add button to close and open dropdown menu
   return (
     <Autocomplete
-      onOpen={() => setIsOpen(true)}
-      onClose={() => setIsOpen(false)}
       {...props}
       renderInput={(params) => (
         <FormControl
@@ -44,18 +33,6 @@ function AutoCompleteSearchbox<T>(props: AutoCompleteSearchBoxProps<T>) {
             disableUnderline
             fullWidth
             placeholder={props.placeholder}
-        /*     endAdornment={
-              <Stack
-                sx={{
-                  transform: `rotateX(${isOpen ? "180" : "0"}deg)`,
-                  paddingRight: "1em",
-                  height: "100%",
-                  pointerEvents: "none",
-                }}
-              >
-                <CustomChevronIcon color={theme.palette.grey["600"]} />
-              </Stack>
-            } */
           />
         </FormControl>
       )}
